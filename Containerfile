@@ -12,6 +12,7 @@ FROM registry.access.redhat.com/ubi9/ubi-minimal AS final
 
 RUN set -x \
     && microdnf install -y --nodocs \
+        diffutils \
         jq \
         python3 \
     && microdnf clean all
